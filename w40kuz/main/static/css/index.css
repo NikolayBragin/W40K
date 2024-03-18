@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Suez+One&display=swap');
+
+#left_index {
+    float: left;
+    width: 20%;
+    background-color: #eeeeee;
+    padding: 0.3%;}
+#main_index {
+    float: left;
+    width: 59.4%;
+    background-color: #eeeeee;
+    padding: 0.3%;}
+#right_index {
+    float: left;
+    width: 20%;
+    background-color: #eeeeee;
+    padding: 0.3%;}
+
+#heading_index {
+    text-align: center;
+    margin-left: 40%;}
+
+#heading_index_left, #heading_index_right {
+    text-align: center;
+    margin-left: 12%;}
+
+
+#all_news {
+    float: left;
+    margin-left: 40%;
+    width: 30%;}
+#all_video, #all_photo {
+    float: left;
+    margin-left: 20%;}
+#all_news>a>div, #all_video>a>div, #all_photo>a>div {
+    float: left;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #EC6550;
+    text-shadow: #454545 0 0 2px;
+    border-bottom: 4px solid #D95B48;
+    color: white;
+    font-family: 'Roboto Slab', serif;}
+#all_news>a:hover>div, #all_video>a:hover>div, #all_photo>a:hover>div  {
+    border-bottom: 2px solid #D95B48;
+    margin-top: 7px;}
+#all_news>a:active>div, #all_video>a:active>div, #all_photo>a:active>div {
+    border-bottom: 0;
+    margin-top: 9px;}
+
+#index_photo, #index_video {
+    margin-left: auto;          /* выравнивание по центру */
+    margin-right: auto;         /* выравнивание по центру */
+    padding: 2%;
+    background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;}
+
+#index_photo>img {
+    float: left;
+    width: 350px;
+    height: 197px;}
+
+#index_video>iframe {
+    float: left;
+    width: 350px;
+    height: 197px;}

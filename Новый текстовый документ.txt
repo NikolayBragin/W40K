@@ -1,0 +1,80 @@
+сделать добавление новости с кнопкой и т.д. по видео (урок 9)!!!
+сделать надпись при успешной регистрации и автовход
+
+67LFxNg{
+300 x 168
+_____________________
+clear
+cd w40kuz
+cd..
+python manage.py runserver
+_____________________
+W40K = web-app
+itproger = w40kuz
+_____________________
+
+pip install django			Установит Джанго
+django-admin startproject w40kuz	Создать основную папку
+python manage.py startapp main		Создать дополнительное приложение main
+	в w40kuz/settings.py добавить 'main'
+	в w40kuz/urls написать отслеживание ссылки главной страницы ()
+	
+pip install Pillow			Модуль для обработки картинок
+python manage.py makemigrations		Создать файл миграции (из папки itproger = w40kuz!!!)
+python manage.py migrate		Выполнить миграцию
+	поменять язык на ru в django_news/settings
+python manage.py createsuperuser	Создать админа (admin 123454)
+pip install whitenoise			ДЛя отображения картинок на сайте
+
+
+
+______________
+______________
+
+
+
+!!!!!!!!!!!!!!!! ЗАПУСКАТЬ ИЗ ГЛАВНОЙ ПАПКИ!!!!!!!!!!!!!!!!!!
+cd ..	сернуться на папку назад
+
+git init
+git add .
+git commit -m "Финальная версия для презентации для понедельника"
+
+git remote add origin https://github.com/NikolayBragin/django_hh.git
+git branch -M main
+git push -u origin main
+_________________________
+
+git clone https://github.com/NikolayBragin/django_hh.git
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_hh/django_hh.settings'
+
+
+ls
+cd django_hh
+pip list
+
+path = '/home/STRsNICK/django_hh/django_hh'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'django_hh.settings'
+
+pip install telebot
+pip install Pillow
+pip install whitenoise
+
+
+whitenoise.middleware.WhiteNoiseMiddleware
+
+прогрузить картинки из статике на самом сайте
+
+
+
+ариизонский университет
+it департамент
+студенты 500 человек
+
+
+            
+
+
+
+
+

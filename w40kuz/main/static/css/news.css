@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Suez+One&display=swap');
+
+#left_news {
+    float: left;
+    width: 20%;
+                background-color: #eeeeee;
+    padding: 0.3%;}
+#main_news {
+    float: left;
+    width: 59.4%;
+            background-color: #eeeeee;
+    padding: 0.3%;}
+#right_news {
+    float: left;
+    width: 20%;
+            background-color: #eeeeee;
+    padding: 0.3%;}
+
+#heading_news {
+    text-align: center;
+    margin-left: 35%;}
+
+.article {
+    width: 80%;
+    margin-left: auto;          /* выравнивание по центру */
+    margin-right: auto;         /* выравнивание по центру */
+    padding: 2%;
+    background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;}
+
+.article>img {
+    float: right;
+    /* border-radius: 5px 5px 0 0;*/
+    width: 250px;
+    height: auto;}
+
+.article>span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3em;
+    color: #333;}

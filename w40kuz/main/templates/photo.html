@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}WH40K Ташкент: Фото{% endblock %}
+{% block content %}
+    <div id="left_photo"></div>
+    <div id="main_photo">
+        <h2 id="heading_photo" class="heading">Фотографии сообщества</h2>
+        <div style="clear: both"><br></div>
+        {% for el in photo %}
+            <div id="photo">
+                <img src="{{ el.full_text }}" alt="">
+                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+    </div>
+    <div id="right_photo"></div>
+{% endblock %}

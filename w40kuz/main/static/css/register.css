@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Suez+One&display=swap');
+
+#left_register {
+    float: left;
+    width: 20%;
+                background-color: #eeeeee;
+    padding: 0.3%;}
+#main_register {
+    float: left;
+    width: 59.4%;
+            background-color: #eeeeee;
+    padding: 0.3%;}
+#right_register {
+    float: left;
+    width: 20%;
+            background-color: #eeeeee;
+    padding: 0.3%;}
+
+#heading_register {
+    margin-left: 30%;}
+
+.register {
+    width: 80%;
+    margin-left: auto;          /* выравнивание по центру */
+    margin-right: auto;         /* выравнивание по центру */
+    padding: 2%;
+    background-color: #fff;
+    font-family: 'Roboto Slab', serif;
+    border-radius: 5px;
+    border: 1px solid #e3e3e3;}
+
+#form_register {
+    font-family: 'Roboto Slab', serif;}
+
+#btn_register {
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px 9px;
+    font-size: 1.2em;
+    background-color: #EC6550;
+    text-shadow: #454545 0 0 2px;
+    border-bottom: 4px solid #D95B48;
+    color: white;
+    font-family: 'Roboto Slab', serif;}
+#btn_register:hover {
+    border-bottom: 2px solid #D95B48;
+    margin-top: 7px;}
+#btn_register:active {
+    border-bottom: 0;
+    margin-top: 9px;}

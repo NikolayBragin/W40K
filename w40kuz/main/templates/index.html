@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block title %}WH40K Ташкент: Главная{% endblock %}
+{% block content %}
+    <div id="left_index">
+        <h2 id="heading_index_left" class="heading">Фотографии сообщества</h2>
+        <div style="clear: both"><br></div>
+        {% for el in photo %}
+            <div id="index_photo">
+                <img src="{{ el.full_text }}" alt="">
+                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+        <div id="all_photo">
+                <a href="{% url 'photo' %}"><div id="btn5">Остальные фото</div></a>
+        </div>
+    </div>
+    <div id="main_index">
+        <h2 id="heading_index" class="heading">Последние новости</h2>
+        <div style="clear: both"><br></div>
+        {% for el in news %}
+            <div class="article">
+                <img src="/{{ el.photo }}" alt="News" title="News">
+                <span class="heading">{{ el.title }}</span><br>
+                <br>
+                <span>{{ el.date }}</span><br>
+                <br>
+                <span>{{ el.full_text }}</span><br>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+        <div id="all_news">
+                <a href="{% url 'news' %}"><div id="btn3">Остальные новости</div></a>
+        </div>
+    </div>
+    <div id="right_index">
+        <h2 id="heading_index_right" class="heading">Обучающие видео</h2>
+        <div style="clear: both"><br></div>
+        {% for el in video %}
+            <div id="index_video">
+                <iframe src="{{ el.full_text }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+        <div id="all_video">
+                <a href="{% url 'video' %}"><div id="btn4">Остальные видео</div></a>
+        </div>
+    </div>
+{% endblock %}

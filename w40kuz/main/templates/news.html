@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}WH40K Ташкент: Новости{% endblock %}
+{% block content %}
+    <div id="left_news" class="left_block"></div>
+    <div id="main_news" class="main_block">
+        <h2 id="heading_news" class="heading">Новости сообщества</h2>
+        <div style="clear: both"><br></div>
+        {% for el in news %}
+            <div class="article">
+                <img src="/{{ el.photo }}" alt="News" title="News">
+                <span class="heading">{{ el.title }}</span><br>
+                <br>
+                <span>{{ el.date }}</span><br>
+                <br>
+                <span>{{ el.full_text }}</span>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+    </div>
+    <div id="right_news" class="right_block"></div>
+{% endblock %}
+

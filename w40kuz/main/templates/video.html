@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %}WH40K Ташкент: Видео{% endblock %}
+{% block content %}
+    <div id="left_video"></div>
+    <div id="main_video">
+        <h2 id="heading_video" class="heading">Обучающие видео</h2>
+        <div style="clear: both"><br></div>
+        {% for el in video %}
+            <div class="video">
+                <span class="heading">{{ el.title }}</span><br>
+                <div style="clear: both"><br></div>
+                <iframe src="{{ el.full_text }}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <div style="clear: both"></div>
+            </div>
+            <div style="clear: both"><br></div>
+        {% endfor %}
+    </div>
+    <div id="right_video"></div>
+{% endblock %}

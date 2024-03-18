@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/news.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/video.css' %}">
+    <link rel="stylesheet" href="{% static 'css/photo.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <meta name="description" content="информационно-развлекательный портал для любителей настольного Warhammer 40k в Ташкенте! Новости комьюнити, события, обучение и многое другое">
+    <meta name="keywords" content="warhammer, warhammer 40k, warhammer40k, ваха, Ташкент, Узбекистан, где поиграть">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{% static 'img/Warhammer40k_uz_logo.jpg' %}" type="image/x-icon">
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content">
+            <header>
+                <div id="logo">
+                    <img src="{% static 'img/Warhammer40k_uz_logo.jpg' %}">
+                    <span>Warhammer 40K UZ</span>
+                </div>
+                <div id="home"><a href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Главная</a></div>
+                <div id="about"><a href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i> Про нас</a></div>
+                <div id="contacts"><a href="{% url 'contacts' %}"><i class="fa-solid fa-paperclip"></i> Контакты</a></div>
+                <div id="reg_auth">
+                    {% if user.is_authenticated %}
+                        <form id="logout-form" action='{% url "logout" %}' method="POST">
+                            {% csrf_token %}
+                            <button>Выйти</button>
+                        </form>
+                    {% else %}
+                        <a href="/accounts/login/" title="Войти в кабинет пользователя"><div>Войти</div></a>
+                        <a href="/register" title="Регистрация на сайте"><div>Регистрация</div></a>
+                    {% endif %}
+                </div>
+            </header>
+            <nav>
+                <a href="{% url 'news' %}">Новости</a>
+                <a href="{% url 'video' %}">Обучающие видео</a>
+                <a href="{% url 'photo' %}">Фото</a>
+                <a href="">Полезные ссылки</a>
+                <a href="">Кое-что еще...</a>
+            </nav>
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+            <div id="footer_menu">
+                <a href="" title="Узнать детальнее о рекламе">Реклама</a>
+                <a href="" title="Поддержать проект">Поддержать проект</a>
+                <a href="" title="Написать письмо">Обратная связь</a>
+            </div>
+            <div id="site_name">
+                <span>Warhammer 40K UZ - сообщество вархаммеристов!</span>
+            </div>
+            <div id="rights"><a href="">Все права защищены &copy; <?=date ('Y')?></a></div>
+            <div id="social">
+                <a href="" title="Наш инстаграм пока в разработке"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://vk.com/club225088979" title="Группа Вк"><i class="fa-brands fa-vk"></i></a>
+                <a href="https://www.youtube.com/channel/UCwdYtcU1h4LNaQWVVajy8Uw" title="Основной канал на YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://telegram.me/waha_uz_official" title="Telegram"><i class="fa-brands fa-telegram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
