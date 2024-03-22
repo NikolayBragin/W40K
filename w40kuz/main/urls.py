@@ -8,6 +8,11 @@ urlpatterns = [
     path('news', views.news, name='news'),
     path('video', views.video, name='video'),
     path('photo', views.photo, name='photo'),
+    path('allrights', views.allrights, name='allrights'),
+    path('feedback', views.feedback, name='feedback'),
+    path('marketing', views.marketing, name='marketing'),
+    path('support', views.support, name='support'),
+
 ]
 
 
