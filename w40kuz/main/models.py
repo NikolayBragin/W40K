@@ -5,6 +5,7 @@ class Articles(models.Model):
     full_text = models.TextField('Статья')
     date = models.DateTimeField('Дата публикации')
     photo = models.ImageField('Картинка', upload_to='main\static\img')
+    place = models.TextField('Ссылка', default='none')
 
     def __str__(self):
         return self.title
