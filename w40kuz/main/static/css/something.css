@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Suez+One&display=swap');
 
-#left_about {
+#left_something {
     float: left;
     width: 20%;
                 background-color: #eeeeee;
     padding: 0.3%;}
-#main_about {
+#main_something {
     float: left;
     width: 59.4%;
             background-color: #eeeeee;
     padding: 0.3%;}
-#right_about {
+#right_something {
     float: left;
     width: 20%;
             background-color: #eeeeee;
     padding: 0.3%;}
 
-#heading_about {
+#heading_something {
     text-align: center;
-    margin-left: 45%;}
+    margin-left: 40%;}
 
-.about {
+.contacts {
     width: 80%;
     margin-left: auto;          /* выравнивание по центру */
     margin-right: auto;         /* выравнивание по центру */
@@ -30,21 +30,12 @@
     border-radius: 5px;
     border: 1px solid #e3e3e3;}
 
-/*.about>img {
+/*.contacts>img {
     float: right;
     height: 100px;
     width: auto;}*/
 
-.about>span {
+.contacts>span {
     font-family: 'Roboto Slab', serif;
     font-size: 1.3em;
     color: #333;}
-
-.about_img {
-    width: 850px;
-    height: auto;}
-
-.about_img_3 {
-    width: 270px;
-    height: auto;}
-

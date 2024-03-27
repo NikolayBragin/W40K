@@ -12,6 +12,8 @@ urlpatterns = [
     path('feedback', views.feedback, name='feedback'),
     path('marketing', views.marketing, name='marketing'),
     path('support', views.support, name='support'),
+    path('links', views.links, name='links'),
+    path('something', views.something, name='something'),
     path('google84caa8db29903f31', views.google84caa8db29903f31, name='google84caa8db29903f31'),
 
 ]

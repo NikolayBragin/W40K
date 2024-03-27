@@ -35,6 +35,14 @@ def support(request):
     return render(request, 'support.html')
 
 
+def links(request):
+    return render(request, 'links.html')
+
+
+def something(request):
+    return render(request, 'something.html')
+
+
 def google84caa8db29903f31(request):
     return render(request, 'google84caa8db29903f31.html')
 

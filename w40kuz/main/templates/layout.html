@@ -19,13 +19,14 @@
     <link rel="stylesheet" href="{% static 'css/feedback.css' %}">
     <link rel="stylesheet" href="{% static 'css/marketing.css' %}">
     <link rel="stylesheet" href="{% static 'css/support.css' %}">
+    <link rel="stylesheet" href="{% static 'css/links.css' %}">
+    <link rel="stylesheet" href="{% static 'css/something.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta name="description" content="информационно-развлекательный портал для любителей настольного Warhammer 40k в Ташкенте! Новости комьюнити, события, обучение и многое другое">
     <meta name="keywords" content="warhammer, warhammer 40k, warhammer40k, ваха, Ташкент, Узбекистан, где поиграть">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="{% static 'img/Warhammer40k_uz_logo.jpg' %}" type="image/x-icon">
-    <link rel="stylesheet" href="{% static 'img/1_skrin.jpg' %}">
-    <meta name="google-site-verification" content="gOpOTMs_g3Wh0Wa8BAs-DHPE3mRGkWZkpcRSQ6URSe4" />
+    <meta name="google-site-verification" content="gOpOTMs_g3Wh0Wa8BAs-DHPE3mRGkWZkpcRSQ6URSe4">
 </head>
 <body>
     <div id="wrapper">
@@ -54,10 +55,12 @@
                 <a href="{% url 'news' %}">Новости</a>
                 <a href="{% url 'video' %}">Обучающие видео</a>
                 <a href="{% url 'photo' %}">Фото</a>
-                <a href="">Полезные ссылки</a>
-                <a href="">Кое-что еще...</a>
+                <a href="{% url 'links' %}">Полезные ссылки</a>
+                <a href="{% url 'something' %}">Кое-что еще...</a>
             </nav>
-            {% block content %}{% endblock %}
+            <div id="info">
+                {% block content %}{% endblock %}
+            </div>
         </div>
         <footer>
             <div id="footer_menu">

@@ -36,9 +36,10 @@ hr {
     padding: 0;}
 
 header {
+    position: fixed;
     float: left;
     background-color: black;
-    width: 99.4%;
+    width: 100%;
     padding: 0.3%;
     border-bottom: 5px solid #59595a;
     font-family: 'Roboto Slab', serif;}
@@ -97,11 +98,11 @@ header {
 
 
 
-
-
 nav {
+    margin-top: 75px;
+    position: fixed;
     background-color: white;
-    width: 99.4%;
+    width: 100%;
     padding: 7px 0.3%;
     float: left;
     border-bottom: 2px solid #ebebeb;
@@ -113,10 +114,16 @@ nav>a {
 nav>a:hover {
     color: #868686;}
 
+
+#info {
+    margin-top: 127px;
+}
+
+
 footer {
     float: left;
     background-color: black;
-    width: 99.4%;
+    width: 100%;
     padding: 0.3%;
     border-top: 5px solid #59595a;
     font-family: 'Roboto Slab', serif;}
