@@ -35,6 +35,10 @@ def support(request):
     return render(request, 'support.html')
 
 
+def google84caa8db29903f31(request):
+    return render(request, 'google84caa8db29903f31.html')
+
+
 def news(request):
     news = Articles.objects.order_by('-date')
     context = {'news': news}
