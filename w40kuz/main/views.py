@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from . import forms
+from django.contrib.auth import get_user_model, login
 from .models import Articles, Video, Photo
 
 
@@ -69,9 +70,11 @@ def register(request):
     if request.method == 'POST':
         form = forms.RegisterForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            login(request, user)
         return redirect('/')
     else:
         form = forms.RegisterForm(request.POST)
+
     context = {'form': form}
     return render(request, 'registration/register.html', context)
